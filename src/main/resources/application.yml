@@ -1,0 +1,27 @@
+disconf:
+  # 环境
+  env: test
+  # 调试模式
+  # 调试模式下，ZK超时或断开连接后不会重新连接（常用于client单步debug）
+  # 非调试模式下，ZK超时或断开连接会自动重新连接
+  debug: false
+  # 扫描路径
+  # 多路径间用","分隔
+  scanPackage: com.rui.demo.dto
+  # 是否使用远程配置文件
+  # true(默认)会从远程获取配置 false则直接获取本地配置
+  enableDisconf: true
+  # 配置服务器 HOST
+  # 多个HOST，用逗号分隔
+  # eg: 127.0.0.1:8000,127.0.0.1:8000
+  confServerHost: disconf.demo.com
+  # 版本
+  version: 1.0.0
+  # 应用名
+  app: disconf-demo
+  # 忽略哪些分布式配置，多个配置用逗号分隔
+  ignoreDisconfList:
+  # 获取远程配置的重试次数，默认是3次
+  confServerUrlRetryTimes: 1
+  # 获取远程配置的重试时休眠时间，默认是5秒
+  confServerUrlRetrySleepSeconds: 1
